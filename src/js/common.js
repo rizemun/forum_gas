@@ -1,2 +1,3 @@
-let add = (a,b) => a+b;
-console.log(add(2,3));
+import loading from './modules/loading'
+
+loading.init(0);
