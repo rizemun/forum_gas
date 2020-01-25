@@ -10,11 +10,24 @@
 </head>
 <body>
 <div class="wrapper">
-    <h1>Webpack</h1>
-    <h1>Webpack</h1>
-    <span>Loading</span>
-    <img src="./assets/img/back1.png" alt="">
+    <h1>Articles</h1>
+
+    <div class="loaded-text">
+        <ul class="loaded-text__list" data-loaded-text-list>
+
+        </ul>
+    </div>
+
+
 </div>
+
+<template id="loading-article">
+    <li class="loaded-text__elem">
+        <div class="loaded-text__title" data-title></div>
+        <div class="loaded-text__content" data-content></div>
+    </li>
+</template>
+
 
 <script type="text/javascript" src="./assets/js/app.js"></script>
 </body>
