@@ -3,22 +3,20 @@ module.exports = {
     init() {
         const request = new XMLHttpRequest();
         let url = this.settings.adress;
-        request.open('GET', url, true);
 
         request.addEventListener("readystatechange", () => {
             if (request.readyState === 4 && request.status === 200) {
-                    const res = JSON.parse(request.responseText);
+                const res = JSON.parse(request.responseText);
 
                 for (let i = 0; i < res.length; i++) {
                     setData(res.titles[i], res.articles[i]);
                 }
 
-
-                setData()
             }
         });
-        request.send();
 
+        request.open('GET', url, true);
+        request.send();
     },
 
     settings: {
